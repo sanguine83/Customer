@@ -1,0 +1,23 @@
+# Reject condition check in source mysql db
+mysql> select count(*) from CLIENT where FIRST_NM='Sophia' and (verify_sts = 0 or EFFECTIVE_DT < '1799-09-01');
++----------+
+| count(*) |
++----------+
+|      638 |
++----------+
+1 row in set (3.34 sec)
+
+
+mysql> select count(*) from ALTERNATE  where ALT_LONG_NM='Sophia' and (verify_sts = 0 or EFFECTIVE_DT < '1799-09-01');
++----------+
+| count(*) |
++----------+
+|      586 |
++----------+
+1 row in set (2.37 sec)
+
+# Reject file counts after Pig Validation
+hduser@Ubuntu-Master:~/Programs/Project/Validation/logs$ hdfs dfs -cat /user/hduser/Project/Reject/CLIENT_08222019/CLIENT_1 | wc -l
+638
+hduser@Ubuntu-Master:~/Programs/Project/Validation/logs$ hdfs dfs -cat /user/hduser/Project/Reject/ALTERNATE_08222019/ALTERNATE_1 | wc -l
+586

@@ -1,0 +1,11 @@
+Calling File ingestion script
+LOG Path :  /home/hduser/Programs/Project/Ingest/logs
+Input File Path :  /media/sf_Share
+HDFS Location :  /user/hduser/Project/Ingest
+###############################################################################
+Import Table: ADDRESS
+hdfs dfs -put /media/sf_Share/ADDRESS /user/hduser/Project/Ingest/ADDRESS_08212019/ADDRESS_1
+###############################################################################
+File availability in HDFS
+Found 1 items
+-rw-r--r--   1 hduser supergroup  205674710 2019-08-21 09:07 /user/hduser/Project/Ingest/ADDRESS_08212019/ADDRESS_1

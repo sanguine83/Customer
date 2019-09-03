@@ -1,0 +1,449 @@
+hduser@Ubuntu-Master:~/Programs/Project/Ingest$ date
+Tue Aug 20 16:44:28 EDT 2019
+hduser@Ubuntu-Master:~/Programs/Project/Ingest$ /home/hduser/Programs/Project/Ingest/ingest.sh FULL
+ls: `/user/hduser/Project/Ingest/CLIENT_08202019/*': No such file or directory
+Warning: /usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/../hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/../hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: /usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+Warning: /usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/../zookeeper does not exist! Accumulo imports will fail.
+Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+19/08/20 16:45:10 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6
+19/08/20 16:45:10 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+19/08/20 16:45:10 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+19/08/20 16:45:10 INFO tool.CodeGenTool: Beginning code generation
+19/08/20 16:45:12 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `CLIENT` AS t LIMIT 1
+19/08/20 16:45:12 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `CLIENT` AS t LIMIT 1
+19/08/20 16:45:12 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /usr/install/hadoop-2.7.1
+Note: ./CLIENT.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+19/08/20 16:45:18 INFO orm.CompilationManager: Writing jar file: ./CLIENT.jar
+19/08/20 16:45:18 WARN manager.MySQLManager: It looks like you are importing from mysql.
+19/08/20 16:45:18 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+19/08/20 16:45:18 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+19/08/20 16:45:18 INFO manager.MySQLManager: Setting zero DATETIME behavior to convertToNull (mysql)
+19/08/20 16:45:18 INFO mapreduce.ImportJobBase: Beginning import of CLIENT
+19/08/20 16:45:18 INFO Configuration.deprecation: mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+19/08/20 16:45:19 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+19/08/20 16:45:21 INFO Configuration.deprecation: mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+19/08/20 16:45:21 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+19/08/20 16:45:21 INFO Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+19/08/20 16:45:21 INFO jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+19/08/20 16:45:23 INFO db.DBInputFormat: Using read commited transaction isolation
+19/08/20 16:45:23 INFO Configuration.deprecation: mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+19/08/20 16:45:23 INFO mapreduce.JobSubmitter: number of splits:1
+19/08/20 16:45:24 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_local1731449724_0001
+19/08/20 16:45:26 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925036/slf4j-api-1.6.1.jar <- /home/hduser/Programs/Project/Ingest/slf4j-api-1.6.1.jar
+19/08/20 16:45:27 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/slf4j-api-1.6.1.jar as file:/app/hadoop/tmp/mapred/local/1566333925036/slf4j-api-1.6.1.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925037/mysql-connector-java-5.1.38-bin.jar <- /home/hduser/Programs/Project/Ingest/mysql-connector-java-5.1.38-bin.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/mysql-connector-java-5.1.38-bin.jar as file:/app/hadoop/tmp/mapred/local/1566333925037/mysql-connector-java-5.1.38-bin.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925038/jackson-annotations-2.3.0.jar <- /home/hduser/Programs/Project/Ingest/jackson-annotations-2.3.0.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/jackson-annotations-2.3.0.jar as file:/app/hadoop/tmp/mapred/local/1566333925038/jackson-annotations-2.3.0.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925039/snappy-java-1.0.5.jar <- /home/hduser/Programs/Project/Ingest/snappy-java-1.0.5.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/snappy-java-1.0.5.jar as file:/app/hadoop/tmp/mapred/local/1566333925039/snappy-java-1.0.5.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925040/avro-1.7.5.jar <- /home/hduser/Programs/Project/Ingest/avro-1.7.5.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/avro-1.7.5.jar as file:/app/hadoop/tmp/mapred/local/1566333925040/avro-1.7.5.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925041/hsqldb-1.8.0.10.jar <- /home/hduser/Programs/Project/Ingest/hsqldb-1.8.0.10.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/hsqldb-1.8.0.10.jar as file:/app/hadoop/tmp/mapred/local/1566333925041/hsqldb-1.8.0.10.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925042/commons-codec-1.4.jar <- /home/hduser/Programs/Project/Ingest/commons-codec-1.4.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/commons-codec-1.4.jar as file:/app/hadoop/tmp/mapred/local/1566333925042/commons-codec-1.4.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925043/ojdbc6.jar <- /home/hduser/Programs/Project/Ingest/ojdbc6.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/ojdbc6.jar as file:/app/hadoop/tmp/mapred/local/1566333925043/ojdbc6.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925044/jackson-mapper-asl-1.9.13.jar <- /home/hduser/Programs/Project/Ingest/jackson-mapper-asl-1.9.13.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/jackson-mapper-asl-1.9.13.jar as file:/app/hadoop/tmp/mapred/local/1566333925044/jackson-mapper-asl-1.9.13.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925045/parquet-common-1.4.1.jar <- /home/hduser/Programs/Project/Ingest/parquet-common-1.4.1.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/parquet-common-1.4.1.jar as file:/app/hadoop/tmp/mapred/local/1566333925045/parquet-common-1.4.1.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925046/kite-data-hive-1.0.0.jar <- /home/hduser/Programs/Project/Ingest/kite-data-hive-1.0.0.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/kite-data-hive-1.0.0.jar as file:/app/hadoop/tmp/mapred/local/1566333925046/kite-data-hive-1.0.0.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925047/commons-compress-1.4.1.jar <- /home/hduser/Programs/Project/Ingest/commons-compress-1.4.1.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/commons-compress-1.4.1.jar as file:/app/hadoop/tmp/mapred/local/1566333925047/commons-compress-1.4.1.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925048/jackson-databind-2.3.1.jar <- /home/hduser/Programs/Project/Ingest/jackson-databind-2.3.1.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/jackson-databind-2.3.1.jar as file:/app/hadoop/tmp/mapred/local/1566333925048/jackson-databind-2.3.1.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925049/ant-eclipse-1.0-jvm1.2.jar <- /home/hduser/Programs/Project/Ingest/ant-eclipse-1.0-jvm1.2.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/ant-eclipse-1.0-jvm1.2.jar as file:/app/hadoop/tmp/mapred/local/1566333925049/ant-eclipse-1.0-jvm1.2.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925050/kite-hadoop-compatibility-1.0.0.jar <- /home/hduser/Programs/Project/Ingest/kite-hadoop-compatibility-1.0.0.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/kite-hadoop-compatibility-1.0.0.jar as file:/app/hadoop/tmp/mapred/local/1566333925050/kite-hadoop-compatibility-1.0.0.jar
+19/08/20 16:45:30 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925051/avro-mapred-1.7.5-hadoop2.jar <- /home/hduser/Programs/Project/Ingest/avro-mapred-1.7.5-hadoop2.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/avro-mapred-1.7.5-hadoop2.jar as file:/app/hadoop/tmp/mapred/local/1566333925051/avro-mapred-1.7.5-hadoop2.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925052/jackson-core-asl-1.9.13.jar <- /home/hduser/Programs/Project/Ingest/jackson-core-asl-1.9.13.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/jackson-core-asl-1.9.13.jar as file:/app/hadoop/tmp/mapred/local/1566333925052/jackson-core-asl-1.9.13.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925053/parquet-hadoop-1.4.1.jar <- /home/hduser/Programs/Project/Ingest/parquet-hadoop-1.4.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/parquet-hadoop-1.4.1.jar as file:/app/hadoop/tmp/mapred/local/1566333925053/parquet-hadoop-1.4.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925054/sqoop-1.4.6.jar <- /home/hduser/Programs/Project/Ingest/sqoop-1.4.6.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/sqoop-1.4.6.jar as file:/app/hadoop/tmp/mapred/local/1566333925054/sqoop-1.4.6.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925055/paranamer-2.3.jar <- /home/hduser/Programs/Project/Ingest/paranamer-2.3.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/paranamer-2.3.jar as file:/app/hadoop/tmp/mapred/local/1566333925055/paranamer-2.3.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925056/parquet-jackson-1.4.1.jar <- /home/hduser/Programs/Project/Ingest/parquet-jackson-1.4.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/parquet-jackson-1.4.1.jar as file:/app/hadoop/tmp/mapred/local/1566333925056/parquet-jackson-1.4.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925057/commons-io-1.4.jar <- /home/hduser/Programs/Project/Ingest/commons-io-1.4.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/commons-io-1.4.jar as file:/app/hadoop/tmp/mapred/local/1566333925057/commons-io-1.4.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925058/commons-logging-1.1.1.jar <- /home/hduser/Programs/Project/Ingest/commons-logging-1.1.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/commons-logging-1.1.1.jar as file:/app/hadoop/tmp/mapred/local/1566333925058/commons-logging-1.1.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925059/xz-1.0.jar <- /home/hduser/Programs/Project/Ingest/xz-1.0.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/xz-1.0.jar as file:/app/hadoop/tmp/mapred/local/1566333925059/xz-1.0.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925060/commons-jexl-2.1.1.jar <- /home/hduser/Programs/Project/Ingest/commons-jexl-2.1.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/commons-jexl-2.1.1.jar as file:/app/hadoop/tmp/mapred/local/1566333925060/commons-jexl-2.1.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925061/kite-data-mapreduce-1.0.0.jar <- /home/hduser/Programs/Project/Ingest/kite-data-mapreduce-1.0.0.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/kite-data-mapreduce-1.0.0.jar as file:/app/hadoop/tmp/mapred/local/1566333925061/kite-data-mapreduce-1.0.0.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925062/ant-contrib-1.0b3.jar <- /home/hduser/Programs/Project/Ingest/ant-contrib-1.0b3.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/ant-contrib-1.0b3.jar as file:/app/hadoop/tmp/mapred/local/1566333925062/ant-contrib-1.0b3.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925063/kite-data-core-1.0.0.jar <- /home/hduser/Programs/Project/Ingest/kite-data-core-1.0.0.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/kite-data-core-1.0.0.jar as file:/app/hadoop/tmp/mapred/local/1566333925063/kite-data-core-1.0.0.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925064/parquet-column-1.4.1.jar <- /home/hduser/Programs/Project/Ingest/parquet-column-1.4.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/parquet-column-1.4.1.jar as file:/app/hadoop/tmp/mapred/local/1566333925064/parquet-column-1.4.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925065/parquet-avro-1.4.1.jar <- /home/hduser/Programs/Project/Ingest/parquet-avro-1.4.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/parquet-avro-1.4.1.jar as file:/app/hadoop/tmp/mapred/local/1566333925065/parquet-avro-1.4.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925066/parquet-encoding-1.4.1.jar <- /home/hduser/Programs/Project/Ingest/parquet-encoding-1.4.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/parquet-encoding-1.4.1.jar as file:/app/hadoop/tmp/mapred/local/1566333925066/parquet-encoding-1.4.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925067/parquet-generator-1.4.1.jar <- /home/hduser/Programs/Project/Ingest/parquet-generator-1.4.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/parquet-generator-1.4.1.jar as file:/app/hadoop/tmp/mapred/local/1566333925067/parquet-generator-1.4.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925068/parquet-format-2.0.0.jar <- /home/hduser/Programs/Project/Ingest/parquet-format-2.0.0.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/parquet-format-2.0.0.jar as file:/app/hadoop/tmp/mapred/local/1566333925068/parquet-format-2.0.0.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925069/opencsv-2.3.jar <- /home/hduser/Programs/Project/Ingest/opencsv-2.3.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/opencsv-2.3.jar as file:/app/hadoop/tmp/mapred/local/1566333925069/opencsv-2.3.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566333925070/jackson-core-2.3.1.jar <- /home/hduser/Programs/Project/Ingest/jackson-core-2.3.1.jar
+19/08/20 16:45:31 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/jackson-core-2.3.1.jar as file:/app/hadoop/tmp/mapred/local/1566333925070/jackson-core-2.3.1.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925036/slf4j-api-1.6.1.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925037/mysql-connector-java-5.1.38-bin.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925038/jackson-annotations-2.3.0.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925039/snappy-java-1.0.5.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925040/avro-1.7.5.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925041/hsqldb-1.8.0.10.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925042/commons-codec-1.4.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925043/ojdbc6.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925044/jackson-mapper-asl-1.9.13.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925045/parquet-common-1.4.1.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925046/kite-data-hive-1.0.0.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925047/commons-compress-1.4.1.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925048/jackson-databind-2.3.1.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925049/ant-eclipse-1.0-jvm1.2.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925050/kite-hadoop-compatibility-1.0.0.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925051/avro-mapred-1.7.5-hadoop2.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925052/jackson-core-asl-1.9.13.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925053/parquet-hadoop-1.4.1.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925054/sqoop-1.4.6.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925055/paranamer-2.3.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925056/parquet-jackson-1.4.1.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925057/commons-io-1.4.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925058/commons-logging-1.1.1.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925059/xz-1.0.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925060/commons-jexl-2.1.1.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925061/kite-data-mapreduce-1.0.0.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925062/ant-contrib-1.0b3.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925063/kite-data-core-1.0.0.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925064/parquet-column-1.4.1.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925065/parquet-avro-1.4.1.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925066/parquet-encoding-1.4.1.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925067/parquet-generator-1.4.1.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925068/parquet-format-2.0.0.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925069/opencsv-2.3.jar
+19/08/20 16:45:32 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566333925070/jackson-core-2.3.1.jar
+19/08/20 16:45:32 INFO mapreduce.Job: The url to track the job: http://localhost:8080/
+19/08/20 16:45:32 INFO mapreduce.Job: Running job: job_local1731449724_0001
+19/08/20 16:45:32 INFO mapred.LocalJobRunner: OutputCommitter set in config null
+19/08/20 16:45:32 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/20 16:45:32 INFO mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+19/08/20 16:45:32 INFO mapred.LocalJobRunner: Waiting for map tasks
+19/08/20 16:45:32 INFO mapred.LocalJobRunner: Starting task: attempt_local1731449724_0001_m_000000_0
+19/08/20 16:45:33 INFO mapreduce.Job: Job job_local1731449724_0001 running in uber mode : false
+19/08/20 16:45:33 INFO mapreduce.Job:  map 0% reduce 0%
+19/08/20 16:45:33 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/20 16:45:33 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+19/08/20 16:45:33 INFO db.DBInputFormat: Using read commited transaction isolation
+19/08/20 16:45:33 INFO mapred.MapTask: Processing split: 1=1 AND 1=1
+19/08/20 16:45:33 INFO db.DBRecordReader: Working on split: 1=1 AND 1=1
+19/08/20 16:45:33 INFO db.DBRecordReader: Executing query: SELECT `INTERNAL_ID`, `CUSTOMER_ID`, `ACTIVE_SINCE_DT`, `COUNTRY`, `EFFECTIVE_DT`, `EXPIRY_DT`, `FIRST_NM`, `LAST_NM`, `DOB`, `COUNTRY_BRTH`, `CITY_BRTH`, `HIGH_NET`, `LOB_ID`, `VERIFY_STS`, `VERIFY_BY`, `VERIFY_DT`, `CHANGE_BY`, `CHANGE_DT` FROM `CLIENT` AS `CLIENT` WHERE ( 1=1 ) AND ( 1=1 )
+19/08/20 16:45:39 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:45:42 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:45:45 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:45:48 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:45:51 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:45:54 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:45:57 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:00 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:03 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:06 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:09 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:12 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:15 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:18 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:21 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:24 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:27 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:30 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:33 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:36 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:39 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:42 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:45 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:48 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:51 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:54 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:46:57 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:47:00 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:47:03 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:47:06 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:47:09 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:47:12 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:47:15 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:47:18 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:47:21 INFO mapreduce.AutoProgressMapper: Auto-progress thread is finished. keepGoing=false
+19/08/20 16:47:21 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:47:21 INFO mapred.Task: Task:attempt_local1731449724_0001_m_000000_0 is done. And is in the process of committing
+19/08/20 16:47:21 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:47:21 INFO mapred.Task: Task attempt_local1731449724_0001_m_000000_0 is allowed to commit now
+19/08/20 16:47:21 INFO output.FileOutputCommitter: Saved output of task 'attempt_local1731449724_0001_m_000000_0' to hdfs://localhost:54310/user/hduser/Project/Ingest/STAGE/CLIENT/_temporary/0/task_local1731449724_0001_m_000000
+19/08/20 16:47:21 INFO mapred.LocalJobRunner: map
+19/08/20 16:47:21 INFO mapred.Task: Task 'attempt_local1731449724_0001_m_000000_0' done.
+19/08/20 16:47:21 INFO mapred.LocalJobRunner: Finishing task: attempt_local1731449724_0001_m_000000_0
+19/08/20 16:47:21 INFO mapred.LocalJobRunner: map task executor complete.
+19/08/20 16:47:21 INFO mapreduce.Job:  map 100% reduce 0%
+19/08/20 16:47:22 INFO mapreduce.Job: Job job_local1731449724_0001 completed successfully
+19/08/20 16:47:22 INFO mapreduce.Job: Counters: 20
+	File System Counters
+		FILE: Number of bytes read=20160200
+		FILE: Number of bytes written=20620701
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=0
+		HDFS: Number of bytes written=305792308
+		HDFS: Number of read operations=4
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=3
+	Map-Reduce Framework
+		Map input records=2000000
+		Map output records=2000000
+		Input split bytes=87
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=3516
+		Total committed heap usage (bytes)=73637888
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=305792308
+19/08/20 16:47:22 INFO mapreduce.ImportJobBase: Transferred 291.6263 MB in 121.407 seconds (2.4021 MB/sec)
+19/08/20 16:47:22 INFO mapreduce.ImportJobBase: Retrieved 2000000 records.
+19/08/20 16:47:33 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted /user/hduser/Project/Ingest/STAGE/CLIENT/_SUCCESS
+19/08/20 16:48:08 WARN hdfs.DFSClient: DFSInputStream has been closed already
+19/08/20 16:48:14 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted /user/hduser/Project/Ingest/STAGE
+ls: `/user/hduser/Project/Ingest/ALTERNATE_08202019/*': No such file or directory
+Warning: /usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/../hbase does not exist! HBase imports will fail.
+Please set $HBASE_HOME to the root of your HBase installation.
+Warning: /usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/../hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: /usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+Warning: /usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/../zookeeper does not exist! Accumulo imports will fail.
+Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+19/08/20 16:48:25 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6
+19/08/20 16:48:25 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+19/08/20 16:48:26 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+19/08/20 16:48:26 INFO tool.CodeGenTool: Beginning code generation
+19/08/20 16:48:29 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `ALTERNATE` AS t LIMIT 1
+19/08/20 16:48:29 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `ALTERNATE` AS t LIMIT 1
+19/08/20 16:48:29 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /usr/install/hadoop-2.7.1
+Note: ./ALTERNATE.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+19/08/20 16:48:37 INFO orm.CompilationManager: Writing jar file: ./ALTERNATE.jar
+19/08/20 16:48:37 WARN manager.MySQLManager: It looks like you are importing from mysql.
+19/08/20 16:48:37 WARN manager.MySQLManager: This transfer can be faster! Use the --direct
+19/08/20 16:48:37 WARN manager.MySQLManager: option to exercise a MySQL-specific fast path.
+19/08/20 16:48:37 INFO manager.MySQLManager: Setting zero DATETIME behavior to convertToNull (mysql)
+19/08/20 16:48:37 INFO mapreduce.ImportJobBase: Beginning import of ALTERNATE
+19/08/20 16:48:37 INFO Configuration.deprecation: mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+19/08/20 16:48:38 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+19/08/20 16:48:40 INFO Configuration.deprecation: mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+19/08/20 16:48:40 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+19/08/20 16:48:40 INFO Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+19/08/20 16:48:40 INFO jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+19/08/20 16:48:43 INFO db.DBInputFormat: Using read commited transaction isolation
+19/08/20 16:48:43 INFO Configuration.deprecation: mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+19/08/20 16:48:43 INFO mapreduce.JobSubmitter: number of splits:1
+19/08/20 16:48:44 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_local1158579510_0001
+19/08/20 16:48:47 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126101/slf4j-api-1.6.1.jar <- /home/hduser/Programs/Project/Ingest/slf4j-api-1.6.1.jar
+19/08/20 16:48:47 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/slf4j-api-1.6.1.jar as file:/app/hadoop/tmp/mapred/local/1566334126101/slf4j-api-1.6.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126102/mysql-connector-java-5.1.38-bin.jar <- /home/hduser/Programs/Project/Ingest/mysql-connector-java-5.1.38-bin.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/mysql-connector-java-5.1.38-bin.jar as file:/app/hadoop/tmp/mapred/local/1566334126102/mysql-connector-java-5.1.38-bin.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126103/jackson-annotations-2.3.0.jar <- /home/hduser/Programs/Project/Ingest/jackson-annotations-2.3.0.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/jackson-annotations-2.3.0.jar as file:/app/hadoop/tmp/mapred/local/1566334126103/jackson-annotations-2.3.0.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126104/snappy-java-1.0.5.jar <- /home/hduser/Programs/Project/Ingest/snappy-java-1.0.5.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/snappy-java-1.0.5.jar as file:/app/hadoop/tmp/mapred/local/1566334126104/snappy-java-1.0.5.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126105/avro-1.7.5.jar <- /home/hduser/Programs/Project/Ingest/avro-1.7.5.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/avro-1.7.5.jar as file:/app/hadoop/tmp/mapred/local/1566334126105/avro-1.7.5.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126106/hsqldb-1.8.0.10.jar <- /home/hduser/Programs/Project/Ingest/hsqldb-1.8.0.10.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/hsqldb-1.8.0.10.jar as file:/app/hadoop/tmp/mapred/local/1566334126106/hsqldb-1.8.0.10.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126107/commons-codec-1.4.jar <- /home/hduser/Programs/Project/Ingest/commons-codec-1.4.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/commons-codec-1.4.jar as file:/app/hadoop/tmp/mapred/local/1566334126107/commons-codec-1.4.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126108/ojdbc6.jar <- /home/hduser/Programs/Project/Ingest/ojdbc6.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/ojdbc6.jar as file:/app/hadoop/tmp/mapred/local/1566334126108/ojdbc6.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126109/jackson-mapper-asl-1.9.13.jar <- /home/hduser/Programs/Project/Ingest/jackson-mapper-asl-1.9.13.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/jackson-mapper-asl-1.9.13.jar as file:/app/hadoop/tmp/mapred/local/1566334126109/jackson-mapper-asl-1.9.13.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126110/parquet-common-1.4.1.jar <- /home/hduser/Programs/Project/Ingest/parquet-common-1.4.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/parquet-common-1.4.1.jar as file:/app/hadoop/tmp/mapred/local/1566334126110/parquet-common-1.4.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126111/kite-data-hive-1.0.0.jar <- /home/hduser/Programs/Project/Ingest/kite-data-hive-1.0.0.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/kite-data-hive-1.0.0.jar as file:/app/hadoop/tmp/mapred/local/1566334126111/kite-data-hive-1.0.0.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126112/commons-compress-1.4.1.jar <- /home/hduser/Programs/Project/Ingest/commons-compress-1.4.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/commons-compress-1.4.1.jar as file:/app/hadoop/tmp/mapred/local/1566334126112/commons-compress-1.4.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126113/jackson-databind-2.3.1.jar <- /home/hduser/Programs/Project/Ingest/jackson-databind-2.3.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/jackson-databind-2.3.1.jar as file:/app/hadoop/tmp/mapred/local/1566334126113/jackson-databind-2.3.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126114/ant-eclipse-1.0-jvm1.2.jar <- /home/hduser/Programs/Project/Ingest/ant-eclipse-1.0-jvm1.2.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/ant-eclipse-1.0-jvm1.2.jar as file:/app/hadoop/tmp/mapred/local/1566334126114/ant-eclipse-1.0-jvm1.2.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126115/kite-hadoop-compatibility-1.0.0.jar <- /home/hduser/Programs/Project/Ingest/kite-hadoop-compatibility-1.0.0.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/kite-hadoop-compatibility-1.0.0.jar as file:/app/hadoop/tmp/mapred/local/1566334126115/kite-hadoop-compatibility-1.0.0.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126116/avro-mapred-1.7.5-hadoop2.jar <- /home/hduser/Programs/Project/Ingest/avro-mapred-1.7.5-hadoop2.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/avro-mapred-1.7.5-hadoop2.jar as file:/app/hadoop/tmp/mapred/local/1566334126116/avro-mapred-1.7.5-hadoop2.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126117/jackson-core-asl-1.9.13.jar <- /home/hduser/Programs/Project/Ingest/jackson-core-asl-1.9.13.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/jackson-core-asl-1.9.13.jar as file:/app/hadoop/tmp/mapred/local/1566334126117/jackson-core-asl-1.9.13.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126118/parquet-hadoop-1.4.1.jar <- /home/hduser/Programs/Project/Ingest/parquet-hadoop-1.4.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/parquet-hadoop-1.4.1.jar as file:/app/hadoop/tmp/mapred/local/1566334126118/parquet-hadoop-1.4.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126119/sqoop-1.4.6.jar <- /home/hduser/Programs/Project/Ingest/sqoop-1.4.6.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/sqoop-1.4.6.jar as file:/app/hadoop/tmp/mapred/local/1566334126119/sqoop-1.4.6.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126120/paranamer-2.3.jar <- /home/hduser/Programs/Project/Ingest/paranamer-2.3.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/paranamer-2.3.jar as file:/app/hadoop/tmp/mapred/local/1566334126120/paranamer-2.3.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126121/parquet-jackson-1.4.1.jar <- /home/hduser/Programs/Project/Ingest/parquet-jackson-1.4.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/parquet-jackson-1.4.1.jar as file:/app/hadoop/tmp/mapred/local/1566334126121/parquet-jackson-1.4.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126122/commons-io-1.4.jar <- /home/hduser/Programs/Project/Ingest/commons-io-1.4.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/commons-io-1.4.jar as file:/app/hadoop/tmp/mapred/local/1566334126122/commons-io-1.4.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126123/commons-logging-1.1.1.jar <- /home/hduser/Programs/Project/Ingest/commons-logging-1.1.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/commons-logging-1.1.1.jar as file:/app/hadoop/tmp/mapred/local/1566334126123/commons-logging-1.1.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126124/xz-1.0.jar <- /home/hduser/Programs/Project/Ingest/xz-1.0.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/xz-1.0.jar as file:/app/hadoop/tmp/mapred/local/1566334126124/xz-1.0.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126125/commons-jexl-2.1.1.jar <- /home/hduser/Programs/Project/Ingest/commons-jexl-2.1.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/commons-jexl-2.1.1.jar as file:/app/hadoop/tmp/mapred/local/1566334126125/commons-jexl-2.1.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126126/kite-data-mapreduce-1.0.0.jar <- /home/hduser/Programs/Project/Ingest/kite-data-mapreduce-1.0.0.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/kite-data-mapreduce-1.0.0.jar as file:/app/hadoop/tmp/mapred/local/1566334126126/kite-data-mapreduce-1.0.0.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126127/ant-contrib-1.0b3.jar <- /home/hduser/Programs/Project/Ingest/ant-contrib-1.0b3.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/ant-contrib-1.0b3.jar as file:/app/hadoop/tmp/mapred/local/1566334126127/ant-contrib-1.0b3.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126128/kite-data-core-1.0.0.jar <- /home/hduser/Programs/Project/Ingest/kite-data-core-1.0.0.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/kite-data-core-1.0.0.jar as file:/app/hadoop/tmp/mapred/local/1566334126128/kite-data-core-1.0.0.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126129/parquet-column-1.4.1.jar <- /home/hduser/Programs/Project/Ingest/parquet-column-1.4.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/parquet-column-1.4.1.jar as file:/app/hadoop/tmp/mapred/local/1566334126129/parquet-column-1.4.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126130/parquet-avro-1.4.1.jar <- /home/hduser/Programs/Project/Ingest/parquet-avro-1.4.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/parquet-avro-1.4.1.jar as file:/app/hadoop/tmp/mapred/local/1566334126130/parquet-avro-1.4.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126131/parquet-encoding-1.4.1.jar <- /home/hduser/Programs/Project/Ingest/parquet-encoding-1.4.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/parquet-encoding-1.4.1.jar as file:/app/hadoop/tmp/mapred/local/1566334126131/parquet-encoding-1.4.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126132/parquet-generator-1.4.1.jar <- /home/hduser/Programs/Project/Ingest/parquet-generator-1.4.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/parquet-generator-1.4.1.jar as file:/app/hadoop/tmp/mapred/local/1566334126132/parquet-generator-1.4.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126133/parquet-format-2.0.0.jar <- /home/hduser/Programs/Project/Ingest/parquet-format-2.0.0.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/parquet-format-2.0.0.jar as file:/app/hadoop/tmp/mapred/local/1566334126133/parquet-format-2.0.0.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126134/opencsv-2.3.jar <- /home/hduser/Programs/Project/Ingest/opencsv-2.3.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/opencsv-2.3.jar as file:/app/hadoop/tmp/mapred/local/1566334126134/opencsv-2.3.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Creating symlink: /app/hadoop/tmp/mapred/local/1566334126135/jackson-core-2.3.1.jar <- /home/hduser/Programs/Project/Ingest/jackson-core-2.3.1.jar
+19/08/20 16:48:50 INFO mapred.LocalDistributedCacheManager: Localized file:/usr/install/sqoop-1.4.6.bin__hadoop-2.0.4-alpha/lib/jackson-core-2.3.1.jar as file:/app/hadoop/tmp/mapred/local/1566334126135/jackson-core-2.3.1.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126101/slf4j-api-1.6.1.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126102/mysql-connector-java-5.1.38-bin.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126103/jackson-annotations-2.3.0.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126104/snappy-java-1.0.5.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126105/avro-1.7.5.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126106/hsqldb-1.8.0.10.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126107/commons-codec-1.4.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126108/ojdbc6.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126109/jackson-mapper-asl-1.9.13.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126110/parquet-common-1.4.1.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126111/kite-data-hive-1.0.0.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126112/commons-compress-1.4.1.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126113/jackson-databind-2.3.1.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126114/ant-eclipse-1.0-jvm1.2.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126115/kite-hadoop-compatibility-1.0.0.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126116/avro-mapred-1.7.5-hadoop2.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126117/jackson-core-asl-1.9.13.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126118/parquet-hadoop-1.4.1.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126119/sqoop-1.4.6.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126120/paranamer-2.3.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126121/parquet-jackson-1.4.1.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126122/commons-io-1.4.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126123/commons-logging-1.1.1.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126124/xz-1.0.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126125/commons-jexl-2.1.1.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126126/kite-data-mapreduce-1.0.0.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126127/ant-contrib-1.0b3.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126128/kite-data-core-1.0.0.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126129/parquet-column-1.4.1.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126130/parquet-avro-1.4.1.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126131/parquet-encoding-1.4.1.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126132/parquet-generator-1.4.1.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126133/parquet-format-2.0.0.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126134/opencsv-2.3.jar
+19/08/20 16:48:51 INFO mapred.LocalDistributedCacheManager: file:/app/hadoop/tmp/mapred/local/1566334126135/jackson-core-2.3.1.jar
+19/08/20 16:48:51 INFO mapreduce.Job: The url to track the job: http://localhost:8080/
+19/08/20 16:48:51 INFO mapreduce.Job: Running job: job_local1158579510_0001
+19/08/20 16:48:51 INFO mapred.LocalJobRunner: OutputCommitter set in config null
+19/08/20 16:48:51 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/20 16:48:51 INFO mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+19/08/20 16:48:52 INFO mapred.LocalJobRunner: Waiting for map tasks
+19/08/20 16:48:52 INFO mapred.LocalJobRunner: Starting task: attempt_local1158579510_0001_m_000000_0
+19/08/20 16:48:52 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+19/08/20 16:48:52 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+19/08/20 16:48:52 INFO db.DBInputFormat: Using read commited transaction isolation
+19/08/20 16:48:52 INFO mapred.MapTask: Processing split: 1=1 AND 1=1
+19/08/20 16:48:52 INFO mapreduce.Job: Job job_local1158579510_0001 running in uber mode : false
+19/08/20 16:48:52 INFO mapreduce.Job:  map 0% reduce 0%
+19/08/20 16:48:52 INFO db.DBRecordReader: Working on split: 1=1 AND 1=1
+19/08/20 16:48:52 INFO db.DBRecordReader: Executing query: SELECT `INTERNAL_ID`, `ALT_ID`, `ALT_LONG_NM`, `ALT_SHORT_NM`, `EFFECTIVE_DT`, `EXPIRY_DT`, `VERIFY_STS`, `VERIFIED_BY`, `VERIFIED_DT`, `CHANGE_BY`, `CHANGE_DT` FROM `ALTERNATE` AS `ALTERNATE` WHERE ( 1=1 ) AND ( 1=1 )
+19/08/20 16:48:58 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:49:01 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:49:04 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:49:07 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:49:10 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:49:13 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:49:16 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:49:19 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:49:22 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:49:25 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:49:28 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:49:31 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:49:34 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:49:37 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:49:38 INFO mapreduce.AutoProgressMapper: Auto-progress thread is finished. keepGoing=false
+19/08/20 16:49:38 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:49:38 INFO mapred.Task: Task:attempt_local1158579510_0001_m_000000_0 is done. And is in the process of committing
+19/08/20 16:49:38 INFO mapred.LocalJobRunner: map > map
+19/08/20 16:49:38 INFO mapred.Task: Task attempt_local1158579510_0001_m_000000_0 is allowed to commit now
+19/08/20 16:49:38 INFO output.FileOutputCommitter: Saved output of task 'attempt_local1158579510_0001_m_000000_0' to hdfs://localhost:54310/user/hduser/Project/Ingest/STAGE/ALTERNATE/_temporary/0/task_local1158579510_0001_m_000000
+19/08/20 16:49:38 INFO mapred.LocalJobRunner: map
+19/08/20 16:49:38 INFO mapred.Task: Task 'attempt_local1158579510_0001_m_000000_0' done.
+19/08/20 16:49:38 INFO mapred.LocalJobRunner: Finishing task: attempt_local1158579510_0001_m_000000_0
+19/08/20 16:49:38 INFO mapred.LocalJobRunner: map task executor complete.
+19/08/20 16:49:39 INFO mapreduce.Job:  map 100% reduce 0%
+19/08/20 16:49:39 INFO mapreduce.Job: Job job_local1158579510_0001 completed successfully
+19/08/20 16:49:39 INFO mapreduce.Job: Counters: 20
+	File System Counters
+		FILE: Number of bytes read=20158274
+		FILE: Number of bytes written=20618635
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=0
+		HDFS: Number of bytes written=183573058
+		HDFS: Number of read operations=4
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=3
+	Map-Reduce Framework
+		Map input records=2000001
+		Map output records=2000001
+		Input split bytes=87
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=1516
+		Total committed heap usage (bytes)=74285056
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=183573058
+19/08/20 16:49:39 INFO mapreduce.ImportJobBase: Transferred 175.0689 MB in 59.8674 seconds (2.9243 MB/sec)
+19/08/20 16:49:40 INFO mapreduce.ImportJobBase: Retrieved 2000001 records.
+19/08/20 16:49:51 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted /user/hduser/Project/Ingest/STAGE/ALTERNATE/_SUCCESS
+19/08/20 16:50:20 WARN hdfs.DFSClient: DFSInputStream has been closed already
+19/08/20 16:50:27 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted /user/hduser/Project/Ingest/STAGE
+Validation in HDFS
+

@@ -1,0 +1,7 @@
+mysql_user suresh
+mysql_host localhost
+mysql_db customer
+HDFS_ING_STAGE /user/hduser/Project/Ingest/STAGE
+HDFS_LOC /user/hduser/Project/Ingest
+HDFS_TARGET /user/hduser/SQOOP
+FILE_INPUT_PATH /media/sf_Share

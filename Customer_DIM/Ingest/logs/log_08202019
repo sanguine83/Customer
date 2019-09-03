@@ -1,0 +1,15 @@
+Calling Full ingestion script
+LOG Path :  /home/hduser/Programs/Project/Ingest/logs
+HDFS Location :  /user/hduser/Project/Ingest
+###############################################################################
+Import Table: CLIENT
+sqoop import --connect jdbc:mysql://localhost/customer --username suresh --password XXXXX --table CLIENT --target-dir /user/hduser/Project/Ingest/STAGE/CLIENT/ --outdir /home/hduser/Programs/Project/Ingest/output -m 1 --bindir ./
+###############################################################################
+###############################################################################
+Import Table: ALTERNATE
+sqoop import --connect jdbc:mysql://localhost/customer --username suresh --password XXXXX --table ALTERNATE --target-dir /user/hduser/Project/Ingest/STAGE/ALTERNATE/ --outdir /home/hduser/Programs/Project/Ingest/output -m 1 --bindir ./
+###############################################################################
+Found 1 items
+-rw-r--r--   1 hduser supergroup  305792308 2019-08-20 16:48 /user/hduser/Project/Ingest/CLIENT_08202019/CLIENT_1
+Found 1 items
+-rw-r--r--   1 hduser supergroup  183573058 2019-08-20 16:50 /user/hduser/Project/Ingest/ALTERNATE_08202019/ALTERNATE_1

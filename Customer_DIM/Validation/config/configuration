@@ -1,0 +1,6 @@
+HDFS_LOC /user/hduser/Project/Ingest
+HDFS_LOC_VAL /user/hduser/Project/Validation
+HDFS_VAL_STAGE /user/hduser/Project/Validation/STAGE
+HDFS_VAL_STAGE_R /user/hduser/Project/Validation/STAGE_R
+HDFS_LOC_REJECT /user/hduser/Project/Reject
+HDFS_LOC_STAGE /user/hduser/Project/Pig_Staging/Files

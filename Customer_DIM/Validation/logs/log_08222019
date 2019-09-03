@@ -1,0 +1,29 @@
+Thu Aug 22 22:42:14 EDT 2019
+###############################################################################
+Validate Table: CLIENT
+pig -f /home/hduser/Programs/Project/Validation/modules/Validate_CLIENT.pig -param HDFS_LOC_VAL=/user/hduser/Project/Validation/STAGE -param HDFS_LOC=/user/hduser/Project/Ingest/CLIENT_08222019/CLIENT_1 -param HDFS_LOC_REJECT=/user/hduser/Project/Validation/STAGE_R
+###############################################################################
+Thu Aug 22 22:49:46 EDT 2019
+###############################################################################
+Validate Table: ALTERNATE
+pig -f /home/hduser/Programs/Project/Validation/modules/Validate_ALTERNATE.pig -param HDFS_LOC_VAL=/user/hduser/Project/Validation/STAGE -param HDFS_LOC=/user/hduser/Project/Ingest/ALTERNATE_08222019/ALTERNATE_1 -param HDFS_LOC_REJECT=/user/hduser/Project/Validation/STAGE_R
+###############################################################################
+Thu Aug 22 22:56:03 EDT 2019
+###############################################################################
+Validate Table: ADDRESS
+pig -f /home/hduser/Programs/Project/Validation/modules/Validate_ADDRESS.pig -param HDFS_LOC_VAL=/user/hduser/Project/Validation/STAGE -param HDFS_LOC=/user/hduser/Project/Ingest/ADDRESS_08222019/ADDRESS_1 -param HDFS_LOC_REJECT=/user/hduser/Project/Validation/STAGE_R
+###############################################################################
+File availability in HDFS
+Found 1 items
+-rw-r--r--   1 hduser supergroup  289704192 2019-08-22 22:49 /user/hduser/Project/Validation/CLIENT_08222019/CLIENT_1
+Found 1 items
+-rw-r--r--   1 hduser supergroup  175531868 2019-08-22 22:55 /user/hduser/Project/Validation/ALTERNATE_08222019/ALTERNATE_1
+Found 1 items
+-rw-r--r--   1 hduser supergroup  205674524 2019-08-22 23:01 /user/hduser/Project/Validation/ADDRESS_08222019/ADDRESS_1
+Reject File availability in HDFS
+Found 1 items
+-rw-r--r--   1 hduser supergroup      89604 2019-08-22 22:49 /user/hduser/Project/Reject/CLIENT_08222019/CLIENT_1
+Found 1 items
+-rw-r--r--   1 hduser supergroup      57326 2019-08-22 22:55 /user/hduser/Project/Reject/ALTERNATE_08222019/ALTERNATE_1
+Found 1 items
+-rw-r--r--   1 hduser supergroup        186 2019-08-22 23:02 /user/hduser/Project/Reject/ADDRESS_08222019/ADDRESS_1
